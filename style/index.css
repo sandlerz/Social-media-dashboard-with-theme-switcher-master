@@ -1,3 +1,191 @@
+/* (BG) */
+/* (Top BG Pattern) */
+/* (Card BG) */
+/* (Text) */
+/* (Text) */
+/* (BG) */
+/* (Top BG Pattern) */
+/* (Card BG) */
+/* (Text) */
+/* (Text) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 111rem;
+  width: 111rem;
+  height: 5rem;
+  margin: auto;
+  margin: 4rem 0 5rem;
+}
+.header-title__resume {
+  color: hsl(228deg, 12%, 44%);
+  font-weight: 700;
+}
+.header-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-toggle .header-toggle_text {
+  color: hsl(230deg, 22%, 74%);
+  font-weight: 700;
+}
+.header-toggle .darkmode-toggle {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+}
+.header-toggle .darkmode-toggle input {
+  opacity: 0;
+}
+.header-toggle .slider {
+  cursor: pointer;
+  position: absolute;
+  background-color: hsl(230deg, 22%, 74%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5rem;
+}
+.header-toggle .slider::before {
+  position: absolute;
+  content: "";
+  height: 1.9rem;
+  width: 1.9rem;
+  top: 0.3rem;
+  right: 0.4rem;
+  border-radius: 50%;
+  background-color: hsl(225deg, 100%, 98%);
+  transition: 0.4s ease;
+}
+.header-toggle input:checked + .slider::before {
+  transform: translateX(-2.3rem);
+  background-color: hsl(228deg, 28%, 20%);
+}
+.header-toggle input:checked + .slider {
+  background: linear-gradient(90deg, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+}
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-top {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 24.5rem;
+  background-color: hsl(225deg, 100%, 98%);
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.card {
+  position: relative;
+  min-width: 25.5rem;
+  height: 22rem;
+  background-color: hsl(227deg, 47%, 96%);
+  text-align: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card-person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0 1.5rem;
+  gap: 0.8rem;
+}
+.card-person span {
+  color: hsl(228deg, 12%, 44%);
+  font-weight: 700;
+}
+.card-total {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.card-followers {
+  letter-spacing: 0.6rem;
+  text-indent: 0.6rem;
+  color: hsl(228deg, 12%, 44%);
+  text-transform: uppercase;
+}
+.card-balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(163deg, 72%, 41%);
+  font-weight: 700;
+  padding: 2rem 0 0;
+  gap: 0.5rem;
+}
+
+.facebook::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  background-color: hsl(208deg, 92%, 53%);
+}
+
+.twitter::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  background-color: hsl(203deg, 89%, 53%);
+}
+
+.instagram::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  background: linear-gradient(90deg, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+}
+
+.youtube::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  background: hsl(348deg, 97%, 39%);
+}
+
+.red span {
+  color: hsl(356deg, 69%, 56%);
+}
 
 /*# sourceMappingURL=index.css.map */

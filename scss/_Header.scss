@@ -1,0 +1,72 @@
+@use 'variables' as *;
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 111rem;
+  width: 111rem;
+  height: 5rem;
+  margin: auto;
+  margin: 4rem 0 5rem;
+
+  &-title__resume{
+    color: $Dark-Grayish-Blue;
+    font-weight: 700;
+  }
+
+  
+  &-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    .header-toggle_text{
+      color: $Toggle;
+      font-weight: 700;
+    }
+    .darkmode-toggle{
+      position: relative;
+      display: inline-block;
+      width: 5rem;
+      height: 2.5rem;
+      input{
+        opacity: 0;
+      }
+    }
+    
+    .slider{
+      cursor: pointer;
+      position: absolute;
+      background-color: $Toggle;
+      top: 0; right: 0; bottom: 0; left: 0;
+      border-radius: 5rem;
+
+      &::before{
+        position: absolute;
+        content: "";
+        height: 1.9rem;
+        width: 1.9rem;
+        top: 0.3rem; right: 0.4rem;
+        border-radius: 50%;
+        background-color: $Very-Pale-Blue;
+        transition: 0.4s ease;
+      } 
+
+    }
+
+    input:checked + .slider::before{
+      transform: translateX(-2.3rem);
+      background-color: $Dark-Desaturated-Blue;
+    }
+
+    input:checked + .slider{
+      background: $Toggle-dark;
+    }
+  }
+
+}
+
+
+

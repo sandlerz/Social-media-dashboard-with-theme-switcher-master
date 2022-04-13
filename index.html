@@ -12,13 +12,86 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Links js and css -->
-  
+
   <link rel="stylesheet" href="style/index.css">
-  <script src="js/index.js"></script>
+  <script src="js/index.js" defer></script>
   
-  <title>Social media dashboard</title>
+  <title>Social m edia dashboard</title>
 </head>
 <body>
+  <div class="bg-top"></div>
 
+  <header class="header">
+    <div>
+      <h1 class="header-title">Social Media Dashboard</h1>
+      <p class="header-title__resume">Total Followers: 23,004</p>
+    </div>
+    <div class="header-toggle">
+      <p class="header-toggle_text">Dark Mode</p>
+      <label for="darkmode" class="darkmode-toggle">
+        <input type="checkbox" name="darkmode" id="darkmode">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard">
+
+      <div class="card facebook">
+        <div class="card-person">
+          <img src="images/icon-facebook.svg" alt="icon-facebook">
+          <span class="person">@nathanf</span>
+        </div>
+        <p class="card-total">1987</p>
+        <p class="card-followers">Followers</p>
+        <div class="card-balance">
+          <img src="images/icon-up.svg" alt="">
+          <span>12 Today</span>
+        </div>
+      </div>
+
+      <div class="card twitter">
+        <div class="card-person">
+          <img src="images/icon-twitter.svg" alt="icon-facebook">
+          <span class="person">@nathanf</span>
+        </div>
+        <p class="card-total">1044</p>
+        <p class="card-followers">Followers</p>
+        <div class="card-balance">
+          <img src="images/icon-up.svg" alt="">
+          <span>99 Today</span>
+        </div>
+      </div>
+
+      <div class="card instagram">
+        <div class="card-person">
+          <img src="images/icon-instagram.svg" alt="icon-facebook">
+          <span class="person">@realnathaf</span>
+        </div>
+        <p class="card-total">11K</p>
+        <p class="card-followers">Followers</p>
+        <div class="card-balance">
+          <img src="images/icon-up.svg" alt="">
+          <span>1099 Today</span>
+        </div>
+      </div>
+
+      <div class="card youtube">
+        <div class="card-person">
+          <img src="images/icon-youtube.svg" alt="icon-facebook">
+          <span class="person">@nathanf</span>
+        </div>
+        <p class="card-total">8239</p>
+        <p class="card-followers">Subscribers</p>
+        <div class="card-balance red">
+          <img src="images/icon-down.svg" alt="">
+          <span >144 Today</span>
+        </div>
+      </div>
+
+    </section>
+    
+  </main>
 </body>
 </html>
