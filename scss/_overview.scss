@@ -1,0 +1,48 @@
+.overview-title{
+  color: var(--text2);
+  margin-bottom: 3rem;
+}
+
+.mini-card{
+  height: 12.5rem;
+  width: 25.5rem;
+  background-color: var(--card-BG);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .mini-card-top{
+    display: flex;
+    justify-content: space-between;
+    .mini-card-top-title{
+      color: var(--text2);
+      font-size: 1.5rem;
+    }
+    img{
+      display: block;
+      width: 2rem;
+      height: auto;
+    }
+  }
+
+  .mini-card-bottom{
+    display: flex;
+    justify-content: space-between;
+    
+    .number{
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+      color: var(--text);
+    }
+
+    .porcentaje{
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      color: var(--LimeGreen);
+    }
+  }
+}

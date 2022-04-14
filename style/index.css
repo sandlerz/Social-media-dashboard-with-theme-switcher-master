@@ -1,13 +1,27 @@
-/* (BG) */
-/* (Top BG Pattern) */
-/* (Card BG) */
-/* (Text) */
-/* (Text) */
-/* (BG) */
-/* (Top BG Pattern) */
-/* (Card BG) */
-/* (Text) */
-/* (Text) */
+:root {
+  --BG: hsl(0, 0%, 100%);
+  --top-BG-pattern: hsl(225, 100%, 98%);
+  --card-BG: hsl(227, 47%, 96%);
+  --text2: hsl(228, 12%, 44%);
+  --text: hsl(230, 17%, 14%);
+  --toggle: hsl(230, 22%, 74%);
+  --LimeGreen: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(90deg, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+}
+
+.dark {
+  --BG: hsl(230, 17%, 14%);
+  --top-BG-pattern: hsl(232, 19%, 15%);
+  --card-BG: hsl(228, 28%, 20%);
+  --text2: hsl(228, 34%, 66%);
+  --text: hsl(0, 0%, 100%);
+  --toggle: linear-gradient(90deg,hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -18,8 +32,11 @@
   margin: auto;
   margin: 4rem 0 5rem;
 }
+.header-title {
+  color: var(--text);
+}
 .header-title__resume {
-  color: hsl(228deg, 12%, 44%);
+  color: var(--text2);
   font-weight: 700;
 }
 .header-toggle {
@@ -29,7 +46,7 @@
   gap: 1.5rem;
 }
 .header-toggle .header-toggle_text {
-  color: hsl(230deg, 22%, 74%);
+  color: var(--text2);
   font-weight: 700;
 }
 .header-toggle .darkmode-toggle {
@@ -44,7 +61,7 @@
 .header-toggle .slider {
   cursor: pointer;
   position: absolute;
-  background-color: hsl(230deg, 22%, 74%);
+  background: var(--toggle);
   top: 0;
   right: 0;
   bottom: 0;
@@ -59,15 +76,11 @@
   top: 0.3rem;
   right: 0.4rem;
   border-radius: 50%;
-  background-color: hsl(225deg, 100%, 98%);
-  transition: 0.4s ease;
+  background-color: var(--top-BG-pattern);
+  transition: 0.4s ease all;
 }
 .header-toggle input:checked + .slider::before {
-  transform: translateX(-2.3rem);
-  background-color: hsl(228deg, 28%, 20%);
-}
-.header-toggle input:checked + .slider {
-  background: linear-gradient(90deg, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+  right: 2.7rem;
 }
 
 html {
@@ -86,7 +99,8 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: var(--BG);
+  transition: background 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,20 +113,22 @@ body {
   top: 0;
   width: 100%;
   height: 24.5rem;
-  background-color: hsl(225deg, 100%, 98%);
+  background-color: var(--top-BG-pattern);
+  transition: background 0.2s;
 }
 
 .dashboard {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  margin-bottom: 5rem;
 }
 
 .card {
   position: relative;
   min-width: 25.5rem;
   height: 22rem;
-  background-color: hsl(227deg, 47%, 96%);
+  background-color: var(--card-BG);
   text-align: center;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -125,27 +141,32 @@ body {
   gap: 0.8rem;
 }
 .card-person span {
-  color: hsl(228deg, 12%, 44%);
+  color: var(--text2);
   font-weight: 700;
 }
 .card-total {
   font-size: 6rem;
   font-weight: 700;
+  color: var(--text);
 }
 .card-followers {
   letter-spacing: 0.6rem;
   text-indent: 0.6rem;
-  color: hsl(228deg, 12%, 44%);
+  color: var(--text2);
   text-transform: uppercase;
 }
 .card-balance {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: hsl(163deg, 72%, 41%);
+  color: var(--LimeGreen);
   font-weight: 700;
   padding: 2rem 0 0;
   gap: 0.5rem;
+}
+
+.card::before {
+  width: 0%;
 }
 
 .facebook::before {
@@ -153,8 +174,9 @@ body {
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background-color: hsl(208deg, 92%, 53%);
+  width: 0%;
+  background-color: var(--Facebook);
+  animation: width 1s forwards ease;
 }
 
 .twitter::before {
@@ -162,8 +184,9 @@ body {
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background-color: hsl(203deg, 89%, 53%);
+  width: 0%;
+  background-color: var(--Twitter);
+  animation: width 1s forwards ease;
 }
 
 .instagram::before {
@@ -171,8 +194,9 @@ body {
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background: linear-gradient(90deg, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+  width: 0%;
+  background: var(--Instagram);
+  animation: width 1s forwards ease;
 }
 
 .youtube::before {
@@ -180,12 +204,63 @@ body {
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background: hsl(348deg, 97%, 39%);
+  width: 0%;
+  background: var(--YouTube);
+  animation: width 1s forwards ease;
 }
 
+@keyframes width {
+  100% {
+    width: 100%;
+  }
+}
 .red span {
-  color: hsl(356deg, 69%, 56%);
+  color: var(--Bright-Red);
+}
+
+.overview-title {
+  color: var(--text2);
+  margin-bottom: 3rem;
+}
+
+.mini-card {
+  height: 12.5rem;
+  width: 25.5rem;
+  background-color: var(--card-BG);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mini-card .mini-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+.mini-card .mini-card-top .mini-card-top-title {
+  color: var(--text2);
+  font-size: 1.5rem;
+}
+.mini-card .mini-card-top img {
+  display: block;
+  width: 2rem;
+  height: auto;
+}
+.mini-card .mini-card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.mini-card .mini-card-bottom .number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: var(--text);
+}
+.mini-card .mini-card-bottom .porcentaje {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  color: var(--LimeGreen);
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -9,9 +9,13 @@
   height: 5rem;
   margin: auto;
   margin: 4rem 0 5rem;
+  
+  &-title{
+    color: var(--text);
+  }
 
   &-title__resume{
-    color: $Dark-Grayish-Blue;
+    color: var(--text2);
     font-weight: 700;
   }
 
@@ -23,9 +27,10 @@
     gap: 1.5rem;
 
     .header-toggle_text{
-      color: $Toggle;
+      color: var(--text2);
       font-weight: 700;
     }
+
     .darkmode-toggle{
       position: relative;
       display: inline-block;
@@ -39,7 +44,7 @@
     .slider{
       cursor: pointer;
       position: absolute;
-      background-color: $Toggle;
+      background: var(--toggle);
       top: 0; right: 0; bottom: 0; left: 0;
       border-radius: 5rem;
 
@@ -50,22 +55,15 @@
         width: 1.9rem;
         top: 0.3rem; right: 0.4rem;
         border-radius: 50%;
-        background-color: $Very-Pale-Blue;
-        transition: 0.4s ease;
+        background-color: var(--top-BG-pattern);
+        transition: 0.4s ease all;
       } 
-
     }
 
     input:checked + .slider::before{
-      transform: translateX(-2.3rem);
-      background-color: $Dark-Desaturated-Blue;
-    }
-
-    input:checked + .slider{
-      background: $Toggle-dark;
+      right: 2.7rem;
     }
   }
-
 }
 
 

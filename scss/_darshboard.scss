@@ -4,16 +4,18 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
+  margin-bottom: 5rem;
 }
 
 .card{
   position: relative;
   min-width: 25.5rem;
   height: 22rem;
-  background-color: $Light-Grayish-Blue;
+  background-color: var(--card-BG);
   text-align: center;
   border-radius: 0.5rem;
   overflow: hidden;
+
   &-person{
     display: flex;
     align-items: center;
@@ -21,7 +23,7 @@
     padding: 3rem 0 1.5rem;
     gap: 0.8rem;
     span{
-      color: $Dark-Grayish-Blue;
+      color: var(--text2);
       font-weight: 700;
     }
   }
@@ -29,12 +31,13 @@
   &-total{
     font-size: 6rem;
     font-weight: 700;
+    color: var(--text);
   }
 
   &-followers{
     letter-spacing: 0.6rem;
     text-indent: 0.6rem;
-    color: $Dark-Grayish-Blue;
+    color: var(--text2);
     text-transform: uppercase;
   }
 
@@ -42,11 +45,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $LimeGreen;
+    color: var(--LimeGreen);
     font-weight: 700;
     padding: 2rem 0 0;
     gap: 0.5rem;
   }
+}
+
+.card::before{
+  width: 0%;
 }
 
 .facebook::before{
@@ -54,17 +61,20 @@
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background-color: $Facebook;
+  width: 0%;
+  background-color: var(--Facebook);
+  animation: width 1s forwards ease;
 }
+
 
 .twitter::before{
   content: "";
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background-color: $Twitter;
+  width: 0%;
+  background-color: var(--Twitter);
+  animation: width 1s forwards ease;
 }
 
 .instagram::before{
@@ -72,8 +82,9 @@
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background: $Instagram;
+  width: 0%;
+  background: var(--Instagram);
+  animation: width 1s forwards ease;
 }
 
 .youtube::before{
@@ -81,11 +92,19 @@
   position: absolute;
   left: 0;
   height: 0.4rem;
-  width: 100%;
-  background: $YouTube;
+  width: 0%;
+  background: var(--YouTube);
+  animation: width 1s forwards ease;
 }
+
+@keyframes width {
+  100%{
+    width: 100%;
+  }
+}
+
 .red{
   span{
-    color: $Bright-Red; 
+    color: var(--Bright-Red); 
   }
 }
