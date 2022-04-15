@@ -3,6 +3,13 @@
   margin-bottom: 3rem;
 }
 
+.mini-card-grid{
+  display: grid;
+  justify-content: space-between;
+  grid: repeat(2, auto) / repeat(4, auto);
+  gap: 2.5rem;
+}
+
 .mini-card{
   height: 12.5rem;
   width: 25.5rem;
@@ -12,6 +19,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+
+  animation: opacity 2s ease-out;
 
   .mini-card-top{
     display: flex;
@@ -43,6 +53,21 @@
       align-items: center;
       margin-top: auto;
       color: var(--LimeGreen);
+      font-weight: 700;
     }
+  }
+}
+
+.mini-card:hover{
+  filter: var(--hover-card);
+  transition: filter 0.1s ease-in;
+}
+
+@keyframes opacity{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
