@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4rem 16rem 8rem;
+  width: 100vw;
 }
 
 .bg-top{
@@ -34,3 +35,4 @@ body {
   background-color: var(--top-BG-pattern);
   transition: background 0.2s;
 }
+

@@ -1,13 +1,20 @@
-@media only screen and (max-width: 28.125em) {
+@media only screen and (max-width: 46.875em) {
   .bg-top{
     width: 100vw;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
   }
+
   html{
     font-size: 2.3vw;
   }
 
   body{
     padding: 4.6rem 2.9rem 5.2rem;
+  }
+
+  main{
+    width: 100%;
   }
 
   .header{
@@ -22,5 +29,18 @@
       justify-content: space-between;
       border-top: 1px solid var(--text2);
     }
+  }
+
+  .dashboard{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mini-card-grid{
+    grid: repeat(8, auto) / 100%;
+  }
+
+  .mini-card{
+    width: 100%;
   }
 }
